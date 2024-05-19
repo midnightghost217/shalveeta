@@ -12,7 +12,8 @@
         <img src="images/logo3.png" alt="Logo" />
       </div>
       <nav>
-        <ul>
+        <div class="hamburger" id="hamburger">☰</div>
+        <ul id="nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
@@ -122,5 +123,14 @@
         <a href="#"><img src="images/whatsapp.png" alt="WhatsApp" /></a>
       </div>
     </footer>
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("nav-links");
+
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+      });
+    </script>
   </body>
 </html>
