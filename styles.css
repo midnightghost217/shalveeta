@@ -13,18 +13,26 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: navy;
+    background-color: #161a1d;
     color: white;
+    flex-wrap: wrap;
 }
 
 header .logo img {
     width: 50px;
 }
 
+header nav {
+    flex-basis: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
 header nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    flex-direction: column;
+    gap: 10px;
     margin: 0;
     padding: 0;
 }
@@ -37,6 +45,25 @@ header nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    display: block;
+    padding: 10px;
+}
+
+@media (min-width: 768px) {
+    header nav {
+        flex-basis: auto;
+        margin-top: 0;
+    }
+
+    header nav ul {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    header nav ul li a {
+        display: inline;
+        padding: 0;
+    }
 }
 
 /* Hero section styles */
@@ -69,7 +96,7 @@ header nav ul li a {
 
 .hero-text .btn {
     background-color: gold;
-    color: navy;
+    color: #161a1d;
     padding: 10px 20px;
     text-decoration: none;
     font-weight: bold;
@@ -82,10 +109,23 @@ section {
     text-align: center;
 }
 
-@media (max-width: 768px) {
-    section {
-        padding: 20px;
-    }
+footer {
+    background-color: #161a1d;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    clear: both;
+}
+
+footer .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer .social-links img {
+    width: 30px;
+    height: 30px;
 }
 
 /* About section styles */
@@ -141,6 +181,7 @@ section {
     border-radius: 50%;
 }
 
+ 
 /* Gallery section styles */
 .gallery-container {
     display: grid;
@@ -181,6 +222,6 @@ form button {
 }
 
 form button {
-    background-color: navy;
+    background-color: #161a1d;
     color: white;
    
